@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="newprocedure_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0" prefWidth="558.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.views.new_procedureController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Create a new procedure" />
+      <Separator layoutY="42.0" prefHeight="3.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="42.0" />
+      <GridPane layoutX="14.0" layoutY="131.0" prefHeight="211.0" prefWidth="515.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="220.0" minWidth="10.0" prefWidth="213.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.0" minWidth="10.0" prefWidth="217.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="54.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="54.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="54.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="54.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Project Title" />
+            <Label text="Project Number external" GridPane.rowIndex="2" />
+            <TextField fx:id="titleField" prefHeight="25.0" prefWidth="284.0" GridPane.columnIndex="1" />
+            <TextField fx:id="externalNumberField" text="-" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Project Number internal" GridPane.rowIndex="3" />
+            <Label text="Revision Number" GridPane.rowIndex="4" />
+            <TextField fx:id="internalNumberField" text="-" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="revisionField" text="-" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label prefHeight="17.0" prefWidth="272.0" text="Optional Fields. Fill your preference" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Button fx:id="ok_btn" layoutX="491.0" layoutY="511.0" mnemonicParsing="false" onAction="#handleOk" text="Finish" />
+      <Separator layoutY="508.0" prefHeight="3.0" prefWidth="558.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Button fx:id="cancel_btn" layoutX="412.0" layoutY="511.0" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
+      <GridPane layoutX="15.0" layoutY="70.0" prefHeight="30.0" prefWidth="540.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="265.0" minWidth="10.0" prefWidth="149.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="314.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="77.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="17.0" prefWidth="175.0" text="Source Package" />
+            <TextField fx:id="directorypath" editable="false" prefHeight="25.0" prefWidth="269.0" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets right="15.0" />
+               </GridPane.margin>
+            </TextField>
+            <Button fx:id="browse_btn" mnemonicParsing="false" onAction="#saveas" prefHeight="25.0" prefWidth="66.0" text="Browse..." GridPane.columnIndex="2" />
+         </children>
+      </GridPane>
+      <Separator layoutY="128.0" prefHeight="3.0" prefWidth="558.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="128.0" />
+      <CheckBox fx:id="chk_intro" layoutX="235.0" layoutY="398.0" mnemonicParsing="false" selected="true" text="Introduction" />
+      <CheckBox fx:id="chk_wp" layoutX="236.0" layoutY="433.0" mnemonicParsing="false" text="Work Plan 1" />
+      <CheckBox fx:id="chk_conculsion" layoutX="239.0" layoutY="466.0" mnemonicParsing="false" selected="true" text="Conculsion" />
+      <Label layoutX="235.0" layoutY="371.0" text="Which Sub Directorys would like to Create?" />
+      <Label layoutX="165.0" layoutY="100.0" text="This is Optional. Browse to Save Project at a different location" />
+   </children>
+</AnchorPane>

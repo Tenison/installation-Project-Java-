@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<anttasks:AntTask xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:anttasks="http://org.eclipse.fx.ide.jdt/1.0" buildDirectory="C:\Users\MIT\Documents\installation_project\build" cssToBin="true">
+  <deploy packagingFormat="exe">
+    <application mainclass="" version="1.0.0"/>
+    <info title="TIG Studio" vendor="edu.eyeTengin.tig"/>
+  </deploy>
+  <signjar/>
+</anttasks:AntTask>
